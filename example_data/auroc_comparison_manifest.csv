@@ -1,0 +1,9 @@
+model,condition,fold,csv
+ABMIL,Condition A,1,/path/to/abmil_condition_a_test1.csv
+ABMIL,Condition A,2,/path/to/abmil_condition_a_test2.csv
+ABMIL,Condition B,1,/path/to/abmil_condition_b_test1.csv
+ABMIL,Condition B,2,/path/to/abmil_condition_b_test2.csv
+CLAM-SB,Condition A,1,/path/to/clam_condition_a_test1.csv
+CLAM-SB,Condition A,2,/path/to/clam_condition_a_test2.csv
+CLAM-SB,Condition B,1,/path/to/clam_condition_b_test1.csv
+CLAM-SB,Condition B,2,/path/to/clam_condition_b_test2.csv

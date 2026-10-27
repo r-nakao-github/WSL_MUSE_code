@@ -1,0 +1,86 @@
+N_patch: 117
+
+general:
+  exp_num: 3
+  num_folds: 4
+  seed: 42
+
+data:
+  train_dir: /path/to/patches/train
+  test_dir: /path/to/patches/test
+  train_patch_metadata_csv: /path/to/patches/train/patch_metadata.csv
+  test_patch_metadata_csv: /path/to/patches/test/patch_metadata.csv
+  test_csv: /path/to/metadata/test.csv
+  output_dir: /path/to/results/dsmil
+
+cv:
+  method: fixed_blocks   # groupkfold or fixed_blocks
+
+  groupkfold:
+    train_csv: /path/to/metadata/train.csv
+
+  fixed_blocks:
+    block_csvs:
+      - /path/to/metadata/fold0.csv
+      - /path/to/metadata/fold1.csv
+      - /path/to/metadata/fold2.csv
+      - /path/to/metadata/fold3.csv
+
+aug:
+  augmentation: true
+  CLAHE:
+    p: 0.1
+  CoarseDropout:
+    max_height: 6
+    max_holes: 4
+    max_width: 6
+    p: 0.5
+  HorizontalFlip:
+    p: 0.5
+  RandomBrightnessContrast:
+    brightness_limit: 0.1
+    contrast_limit: 0.1
+    p: 0.75
+  RandomRotate90:
+    p: 0.5
+  ShiftScaleRotate:
+    p: 0.7
+    rotate_limit: 15
+    scale_limit: 0.1
+    shift_limit: 0.1
+  VerticalFlip:
+    p: 0.5
+  compress:
+    p: 0.0
+
+model:
+  mil_name: dsmil
+  features_num: 768
+  img_size: 224
+  n_classes: 2
+  name: swin_small_patch4_window7_224
+  dsmil_hidden_dim: 768
+  dsmil_logit_average: true
+
+preprocess:
+  size: 224
+
+test:
+  batch_size: 4
+
+train:
+  amp: true
+  batch_size: 4
+  epochs: 50
+  ga_accum: 4
+  lr: 1.0e-4
+  scheduler:
+    min_lr: 1.0e-6
+    name: cosine_warmup
+    warmup: 5
+  weight_decay: 1.0e-4
+  auc_tolerance: 1e-4
+
+runtime:
+  num_workers: 4
+  pin_memory: true
