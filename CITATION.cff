@@ -1,9 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the associated manuscript. Full citation details will be added after publication."
+message: "If you use this software, please cite the associated manuscript and this software release."
 title: "Weakly Supervised Learning for Bladder Cancer Classification on MUSE Images"
 authors:
   - family-names: "Nakao"
     given-names: "Ryuta"
 version: "1.0.0"
+doi: "10.5281/zenodo.23992618"
 license: "MIT"
 repository-code: "https://github.com/r-nakao-github/WSL_MUSE_code"

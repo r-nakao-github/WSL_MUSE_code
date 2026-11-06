@@ -341,9 +341,11 @@ The example paths are placeholders and must be replaced with local paths before 
 
 ## Citation
 
-If you use this code in your research, please cite the associated manuscript.
+If you use this code in your research, please cite the associated manuscript and the software release.
 
-Full manuscript citation details and the software archive DOI will be added after publication/release.
+Software archive: https://doi.org/10.5281/zenodo.23992618
+
+Full manuscript citation details will be added after publication.
 
 See [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata.
 
